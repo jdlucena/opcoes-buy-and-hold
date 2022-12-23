@@ -21,12 +21,12 @@ $data_ultimo_registro = $json_ultimo_registro['data']['PETR4']['HOR'];
     <meta name="generator" content="Hugo 0.104.2">
     <title>Opções - Buy and Hold</title>
 
-    <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/dist/css/style.css" rel="stylesheet">
     <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
 
-    <link href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.min.css" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
-    <script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
+    <link href="assets/dist/css/jquery.dataTables.min.css" rel="stylesheet">
+    <script src="assets/dist/js/jquery-3.6.3.js"></script>
+    <script src="assets/dist/js/jquery.dataTables.min.js"></script>
 
 
 
