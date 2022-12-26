@@ -16,9 +16,15 @@ $data_ultimo_registro = $json_ultimo_registro['data']['PETR4']['HOR'];
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Hugo 0.104.2">
+    <meta name="description" content="Opções com os melhores prêmios.">
+    <meta name="author" content="Opções B&H">
+    <meta name="generator" content="Opções B&H">
+    <meta name="msapplication-tooltip" content="Sistema voltado para quem busca opções com os maiores prêmios e com strike muito fora do dinheiro.">
+    <link rel="alternate" hreflang="x-default" href="http://opcoes.rf.gd/">
+    <link rel="canonical" href="http://opcoes.rf.gd/">
+    <link rel="icon" type="image/png" href="assets/brand/letter-o.png">
+    <link rel="shortcut icon" href="assets/brand/letter-o.png">
+    <link rel="apple-touch-icon" href="assets/brand/letter-o.png">
     <title>Opções - Buy and Hold</title>
 
     <link href="assets/dist/css/style.css" rel="stylesheet">
@@ -28,85 +34,9 @@ $data_ultimo_registro = $json_ultimo_registro['data']['PETR4']['HOR'];
     <script src="assets/dist/js/jquery-3.6.3.js"></script>
     <script src="assets/dist/js/jquery.dataTables.min.js"></script>
 
-
-
-    <style>
-        /* Scrollbar Styling */
-        ::-webkit-scrollbar {
-            width: 10px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background-color: #ebebeb;
-            -webkit-border-radius: 10px;
-            border-radius: 10px;
-        }
-
-        ::-webkit-scrollbar-thumb {
-            -webkit-border-radius: 10px;
-            border-radius: 10px;
-            background: #6d6d6d;
-        }
-
-        .bd-placeholder-img {
-            font-size: 1.125rem;
-            text-anchor: middle;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            user-select: none;
-        }
-
-        @media (min-width: 768px) {
-            .bd-placeholder-img-lg {
-                font-size: 3.5rem;
-            }
-        }
-
-        .b-example-divider {
-            height: 3rem;
-            background-color: rgba(0, 0, 0, .1);
-            border: solid rgba(0, 0, 0, .15);
-            border-width: 1px 0;
-            box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
-        }
-
-        .b-example-vr {
-            flex-shrink: 0;
-            width: 1.5rem;
-            height: 100vh;
-        }
-
-        .bi {
-            vertical-align: -.125em;
-            fill: currentColor;
-        }
-
-        .nav-scroller {
-            position: relative;
-            z-index: 2;
-            height: 2.75rem;
-            overflow-y: hidden;
-        }
-
-        .nav-scroller .nav {
-            display: flex;
-            flex-wrap: nowrap;
-            padding-bottom: 1rem;
-            margin-top: -1px;
-            overflow-x: auto;
-            text-align: center;
-            white-space: nowrap;
-            -webkit-overflow-scrolling: touch;
-        }
-
-        .mb-auto-new {
-            margin-bottom: 50px;
-        }
-    </style>
-
-
     <!-- Custom styles for this template -->
     <link href="assets/dist/css/cover.css" rel="stylesheet">
+    <link href="assets/dist/css/main.css" rel="stylesheet">
 </head>
 
 <body class="d-flex h-100 text-center text-bg-dark">
@@ -235,7 +165,7 @@ $data_ultimo_registro = $json_ultimo_registro['data']['PETR4']['HOR'];
             <h1>Opções com os melhores prêmios</h1>
             <p class="lead">Sistema voltado para quem busca opções com os maiores prêmios e com strike muito fora do dinheiro.<br>
                 O objetivo é ficar com o prêmio e não ser exercido. Selecione o ativo no menu superior e aproveite!</p>
-            <strong>Fechamento do pregão: <?=$data_ultimo_registro?></strong>
+            <span class="badge text-bg-danger">Fechamento do pregão: <?= $data_ultimo_registro ?></span>
             <p class="lead">
             <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
                 <button type="button" class="btn btn-outline-info btn-lg px-4 me-sm-3 fw-bold">Prêmio: +2%</button>
@@ -258,47 +188,17 @@ $data_ultimo_registro = $json_ultimo_registro['data']['PETR4']['HOR'];
                         <th class="text-center">Negócios</th>
                     </tr>
                 </thead>
-                <tbody class="resultado">                    
-                </tbody>
+                <tbody class="resultado"></tbody>
             </table>
-        </main>        
+        </main>
 
         <footer class="mt-auto text-white-50">
             <p>Desenvolvido por <a href="https://www.linkedin.com/in/jeffersonlucena/" class="text-white">Jefferson Lucena</a> 🦊</p>
         </footer>
     </div>
 
-    <script>
-        $(document).ready(function() {
-            $('#example').DataTable({
-                paging: false,
-                ordering: false,
-                info: false,
-                scrollY: '250px',
-                scrollCollapse: true,
-                "searching": false,
-            });
-        });
-    </script>
-
-    <script>
-        $(function() {
-            $('#idAtivo, #tipoA, #vencimento').change(function() {
-                var pesquisa = document.getElementById('idAtivo').value;
-                var tipopcao = document.getElementById('tipoA').value;
-                var venci = document.getElementById('vencimento').value;
-                var dados = {
-                    palavra: pesquisa,
-                    tpdado: tipopcao,
-                    tpvenc: venci
-                }
-                $.post('opcoes2.php', dados, function(retorna) {
-                    $('.resultado').html(retorna);
-                });
-            });
-        });
-    </script>
-
+    <script src="assets/dist/js/script.js"></script>
+    
 </body>
 
 </html>
