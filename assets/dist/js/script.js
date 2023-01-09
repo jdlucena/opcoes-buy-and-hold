@@ -23,5 +23,9 @@ $(function() {
         $.post('retorno.php', dados, function(retorna) {
             $('.resultado').html(retorna);
         });
+
+        $.post('retorno2.php', dados, function(retorna) {
+            $('#teta').html(retorna);
+        });
     });
 });

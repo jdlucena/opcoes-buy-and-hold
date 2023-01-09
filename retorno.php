@@ -15,9 +15,6 @@ $dados_todas_as_moedas = file_get_contents($endereco_todas_as_moedas);
 // Decodifica a string JSON
 $json_todas_as_moedas = json_decode($dados_todas_as_moedas, true);
 
-$testa = '12,29';
-
-
 $result = $json_todas_as_moedas['data']['cotacoesOpcoes'];
 
 // ordena do maior prêmio

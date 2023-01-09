@@ -166,6 +166,7 @@ $data_ultimo_registro = $json_ultimo_registro['data']['PETR4']['HOR'];
             <p class="lead">Sistema voltado para quem busca opções com os maiores prêmios e com strike muito fora do dinheiro.<br>
                 O objetivo é ficar com o prêmio e não ser exercido. Selecione o ativo no menu superior e aproveite!</p>
             <span class="badge text-bg-danger">Fechamento do pregão: <?= $data_ultimo_registro ?></span>
+            <span class="badge text-bg-warning" id="teta"></span>
             <p class="lead">
             <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
                 <button type="button" class="btn btn-outline-info btn-lg px-4 me-sm-3 fw-bold">Prêmio: +2%</button>
@@ -198,7 +199,10 @@ $data_ultimo_registro = $json_ultimo_registro['data']['PETR4']['HOR'];
     </div>
 
     <script src="assets/dist/js/script.js"></script>
-    
+    <script>
+        
+    </script>
+
 </body>
 
 </html>
